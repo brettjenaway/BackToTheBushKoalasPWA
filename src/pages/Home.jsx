@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import koalaHero from '../assets/koala-hero.jpg';
+import NewsCard from '../components/NewsCard';
 import './Home.css';
 
 function Home() {
@@ -27,6 +28,16 @@ function Home() {
                 </div>
             </section>
 
+            <section className="home-news">
+                <h2>Latest News</h2>
+                <NewsCard title="Latest update from the rescue centre"
+                    date="14 Nov 2026"
+                    category="News"
+                    image={koalaHero} />
+                <Link to="/news" className="more-news-link">
+                    View all news →
+                </Link>
+            </section>
         </main>
     );
 }

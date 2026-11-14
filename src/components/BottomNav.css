@@ -1,0 +1,73 @@
+/* Styling for the bottom navigation bar */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    z-index: 100
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #26322C;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 16px;
+    border-radius: 14px;
+}
+
+.nav-item.active .nav-content {
+    color: #285943;
+    background-color: #dde8df;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+}
+
+.donate-item {
+    color: #C7633D;
+}
+
+.donate-item.active .nav-content {
+    background-color: #FFF0E5;
+    color: #c65a20;
+}
+
+.donate-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #e97937;
+    color: #ffffff;
+
+    margin-top: -24px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.donate-item.active .donate-icon {
+    background-color: #ce5d20;
+}

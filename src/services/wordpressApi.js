@@ -27,8 +27,8 @@ function formatNewsArticle(article) {
 }
 
 //Get multiple news articles
-export async function getLatestNews(number = 2) {
-    const response = await fetch(`${API_URL}/posts?per_page=${number}&_embed`); // Get the latest {number} of articles for homepage. Default is 2 articles.
+export async function getLatestNews(number = 2, page = 1) {
+    const response = await fetch(`${API_URL}/posts?per_page=${number}&page=${page}&_embed`); // Get the latest {number} of articles for homepage. Default is 2 articles.
 
     if (!response.ok) {
         throw new Error('Failed to fetch news articles'); // Throw an error if response is not ok (not 200-299)
@@ -38,6 +38,22 @@ export async function getLatestNews(number = 2) {
 
     return articles.map(formatNewsArticle);
 }
+
+export async function getNewsPage(page = 1, perPage = 5) {
+    const response = await fetch(`${API_URL}/posts?per_page=${perPage}&page=${page}&_embed`);
+
+    if (!response.ok) {
+        throw new Error('Failed to fetch news articles');
+    }
+
+    const data = await response.json();
+
+    return {
+        articles: data.map(formatNewsArticle),
+        totalPages: Number(response.headers.get('X-WP-TotalPages'))
+    };
+}
+
 
 //Get individual news article
 export async function getNewsArticle(id) {

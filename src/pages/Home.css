@@ -22,7 +22,7 @@
 
 .home-welcome h1 {
     font-family: 'PT Serif', Georgia, serif;
-    font-size: clamp(28px, 7vw, 38px);
+    font-size: clamp(30px, 7vw, 38px);
     line-height: 1.2;
     color: var(--color-primary);
     margin: 0;

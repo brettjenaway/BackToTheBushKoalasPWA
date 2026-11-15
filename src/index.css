@@ -134,3 +134,23 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  font-family: 'PT Serif', Georgia, serif;
+  font-size: clamp(30px, 7vw, 38px);
+  line-height: 1.2;
+  color: var(--color-primary);
+  margin: 0 0 12px;
+}
+
+.page-header p {
+  color: var(--color-text);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}

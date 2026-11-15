@@ -19,18 +19,6 @@ function Home() {
             try {
                 const data = await getLatestNews(2);
 
-                console.log('WordPress articles:', data);
-
-                data.forEach((article) => {
-                    console.log('Article:', article.title.rendered);
-                    console.log('Featured media ID:', article.featured_media);
-                    console.log(
-                        'Featured image:',
-                        article._embedded?.['wp:featuredmedia']?.[0]?.source_url
-                    );
-                });
-
-
                 if (!cancelled) {
                     setArticles(data); // If the API request succeeds, store the articles
                 }
@@ -89,15 +77,15 @@ function Home() {
                     articles.map((article) => (
                         <NewsCard
                             key={article.id}
-                            title={article.title.rendered}
+                            id={article.id}
+                            title={article.title}
                             date={new Date(article.date).toLocaleDateString('en-AU', { // convert dates to readable date text
                                 day: 'numeric',
                                 month: 'short',
                                 year: 'numeric'
                             })}
-                            category="News"
-                            image={article.news_image_url || koalaHero}  // display news image or default koala hero image if no article image is found
-
+                            category={article.category}
+                            image={article.image || koalaHero}  // display news image or default koala hero image if no article image is found
                         />
                     ))
                 )}

@@ -49,8 +49,8 @@ function Home() {
                     <p className="home-hero-eyebrow">Welcome to</p>
                     <h1>Back to the Bush Koalas</h1>
                     <p className="home-hero-description">
-                        Discover their stories. Follow their recovery.
-                        Help them return to the wild.
+                        Discover koala stories. Follow their recovery.
+                        Help them return to the bush.
                     </p>
                 </div>
             </section>

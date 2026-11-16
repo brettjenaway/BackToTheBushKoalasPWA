@@ -1,0 +1,177 @@
+.donate-hero {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 30px 24px;
+}
+
+.donate-hero-heart {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 145px;
+    height: 145px;
+    color: #BDD3BA;
+    opacity: 0.25;
+    stroke-width: 1;
+    transform: rotate(15deg);
+    pointer-events: none;
+}
+
+.donate-hero h1 {
+    font-family: 'PT Serif', Georgia, serif;
+    font-size: clamp(30px, 8vw, 40px);
+    line-height: 1.2;
+    margin: 0 0 18px;
+    color: #E6EFE6;
+}
+
+.donate-hero p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #E6EFE6;
+    margin: 0;
+}
+
+.donate-content {
+    margin: 20px;
+    padding: 24px 20px;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.donate-content h2 {
+    font-family: 'PT Serif', Georgia, serif;
+    font-size: 23px;
+    color: #285943;
+    margin: 0 0 14px;
+    text-align: center;
+}
+
+.donate-content>p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #26322C;
+    text-align: center;
+}
+
+.donate-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+    background-color: #C7663D;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+.donate-content .donate-note {
+    text-align: center;
+    font-size: 12px;
+    color: #6F8065;
+    margin: 12px 0 0;
+}
+
+.donate-bank {
+    background: white;
+    margin: 20px;
+    padding: 24px 20px;
+    border-radius: 16px;
+    margin-bottom: 100px;
+}
+
+.donate-bank-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #285943;
+}
+
+.donate-bank-heading h2 {
+    font-family: 'PT Serif', Georgia, serif;
+    font-size: 22px;
+    margin: 0;
+}
+
+.donate-bank>p {
+    color: #26322C;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 16px 0 20px;
+}
+
+.donate-bank-details {
+    background: #F7F4EF;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.bank-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 0;
+}
+
+
+.bank-field+.bank-field {
+    border-top: 1px solid #DDE8DF;
+}
+
+.bank-field span {
+    display: block;
+    color: #6F8065;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.bank-field strong {
+    color: #26322C;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bank-copy-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank-copy-row button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: white;
+    color: #285943;
+    border: 1px solid #DDE8DF;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.donate-receipt {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    color: #285943;
+}
+
+.donate-receipt p {
+    margin: 0;
+    color: #26322C;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.donate-receipt a {
+    color: #285943;
+    font-weight: 600;
+}

@@ -39,6 +39,7 @@ export async function getLatestNews(number = 2, page = 1) {
     return articles.map(formatNewsArticle);
 }
 
+// Get newws articles for news page
 export async function getNewsPage(page = 1, perPage = 5) {
     const response = await fetch(`${API_URL}/posts?per_page=${perPage}&page=${page}&_embed`);
 
@@ -64,6 +65,56 @@ export async function getNewsArticle(id) {
     }
 
     const article = await response.json();
-
+    9031
     return formatNewsArticle(article);
+}
+
+//Format koala API data
+function formatKoala(koala) {
+    return {
+        id: koala.id,
+        name: koala.title.rendered,
+        image: koala.acf?.main_koala_photo?.sizes?.medium
+            || koala.acf?.main_koala_photo?.url
+            || null,
+        imageLarge: koala.acf?.main_koala_photo?.sizes?.large
+            || koala.acf?.main_koala_photo?.url
+            || null,
+        status: koala.acf?.koala_status || '',
+        gender: koala.acf?.gender || '',
+        age: koala.acf?.age || '',
+        excerpt: koala.acf?.excerpt || '',
+        story: koala.acf?.koala_story || '',
+        rescueDate: koala.acf?.date_rescued || '',
+        condition: koala.acf?.primary_condition || '',
+        journeyRescued: koala.acf?.journey_rescued || '',
+        journeyTreated: koala.acf?.journey_treated || '',
+        journeyRehabilitation: koala.acf?.journey_rehabilitation || '',
+        journeyReleased: koala.acf?.journey_released || ''
+    }
+}
+
+
+//Get multiple koala stories
+export async function getKoalas() {
+    const response = await fetch(`${API_URL}/koala?per_page=20`); // Get the latest {number} of articles for homepage. Default is 2 articles.
+
+    if (!response.ok) {
+        throw new Error('Failed to fetch koala stories'); // Throw an error if response is not ok (not 200-299)
+    }
+
+    const koalas = await response.json();
+
+    return koalas.map(formatKoala);
+}
+
+//get one koala story
+export async function getKoala(id) {
+    const response = await fetch(`${API_URL}/koala/${id}`);
+    if (!response.ok) {
+        throw new Error('Failed to fetch koala story');
+    }
+    const koala = await response.json();
+
+    return formatKoala(koala);
 }

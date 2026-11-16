@@ -1,0 +1,129 @@
+.koala-card {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.koala-card-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.koala-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.koala-card-content {
+    padding: 20px;
+}
+
+.koala-card-status {
+    display: inline-block;
+    background-color: var(--color-section);
+    color: var(--color-primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.koala-card-name {
+    font-family: 'PT Serif', Georgia, serif;
+    color: var(--color-primary);
+    font-size: 28px;
+    margin: 6px 0 4px;
+}
+
+.koala-card-gender {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #E8EDE9;
+    color: #48564D;
+}
+
+/* Male koalas */
+.koala-card-gender-male {
+    background-color: #DCECF9;
+    color: #245C87;
+}
+
+/* Female koalas */
+.koala-card-gender-female {
+    background-color: #F8DFE9;
+    color: #9B4268;
+}
+
+.koala-card-excerpt {
+    color: var(--color-text);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.koala-save-button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 16px;
+    border: 2px solid #B94F65;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    color: #B94F65;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.koala-save-button.is-saved {
+    background-color: #B94F65;
+    color: var(--color-white);
+}
+
+.koala-card-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.koala-card-badges {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.koala-save-heart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: #FFF5F6;
+    color: #B94F65;
+    cursor: pointer;
+}
+
+.koala-read-story {
+    display: block;
+    margin-top: 20px;
+    padding: 13px 16px;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}

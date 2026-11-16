@@ -70,7 +70,7 @@ function News() {
                 <p>Follow the latest rehabilitation updates, news and rescue stories from Back to the Bush Koalas.</p>
             </header>
 
-            <section className="news-list" aria-label="News articles">
+            <section className="news-list">
                 {loading ? (
                     <p>Loading news...</p>
                 ) : articles.length === 0 && error ? (

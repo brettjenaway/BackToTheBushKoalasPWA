@@ -1,0 +1,172 @@
+.koala-profile-page {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px 20px 120px;
+    box-sizing: border-box;
+}
+
+/* Back navigation */
+
+.koala-profile-back {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Header */
+
+.koala-profile-header {
+    margin-bottom: 20px;
+}
+
+.koala-profile-header h1 {
+    font-family: 'PT Serif', Georgia, serif;
+    color: var(--color-primary);
+    font-size: clamp(28px, 7vw, 38px);
+    line-height: 1.25;
+    margin: 0 0 16px;
+}
+
+.koala-profile-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.koala-profile-status,
+.koala-profile-gender {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.koala-profile-status {
+    color: var(--color-primary);
+    background-color: var(--color-section);
+}
+
+.koala-profile-gender-male {
+    color: #245C87;
+    background-color: #DCECF9;
+}
+
+.koala-profile-gender-female {
+    color: #9B4268;
+    background-color: #F8DFE9;
+}
+
+/* Main photograph */
+
+.koala-profile-image {
+    display: block;
+    width: 100%;
+    max-height: 440px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 24px;
+}
+
+.koala-profile-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.koala-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    background-color: var(--color-white);
+    border-radius: 12px;
+}
+
+.koala-detail-item:last-child {
+    grid-column: 1 / -1;
+}
+
+.koala-detail-label {
+    color: var(--color-secondary);
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.koala-detail-value {
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.koala-profile-story {
+    margin-bottom: 36px;
+}
+
+.koala-profile-story h2,
+.koala-profile-journey h2 {
+    font-family: 'PT Serif', Georgia, serif;
+    color: var(--color-primary);
+    font-size: 24px;
+    margin: 0 0 16px;
+}
+
+.koala-profile-story p {
+    color: var(--color-text);
+    font-size: 15px;
+    line-height: 1.8;
+    white-space: pre-line;
+    margin: 0;
+}
+
+.koala-journey-timeline {
+    border-left: 2px solid var(--color-section);
+    margin-left: 8px;
+    padding-left: 24px;
+}
+
+.koala-journey-item {
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.koala-journey-item:last-child {
+    padding-bottom: 0;
+}
+
+.koala-journey-dot {
+    position: absolute;
+    left: -32px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--color-primary);
+    border: 3px solid var(--color-background);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.koala-journey-content {
+    padding: 16px;
+    background-color: var(--color-white);
+    border-radius: 12px;
+}
+
+.koala-journey-content h3 {
+    color: var(--color-primary);
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.koala-journey-content p {
+    color: var(--color-text);
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-line;
+    margin: 0;
+}

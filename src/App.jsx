@@ -8,6 +8,7 @@ import Saved from './pages/Saved';
 import More from './pages/More';
 import BottomNav from './components/BottomNav';
 import NewsArticle from './pages/NewsArticle';
+import KoalaProfile from './pages/KoalaProfile';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/koalas" element={<Koalas />} />
+        <Route path="/koalas/:id" element={<KoalaProfile />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/news" element={<News />} />
         <Route path="/news/:id" element={<NewsArticle />} />

@@ -1,0 +1,180 @@
+.koalas-page {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px 20px 120px;
+    box-sizing: border-box;
+}
+
+.koalas-page h1 {
+    font-family: 'PT Serif', Georgia, serif;
+    color: var(--color-primary);
+    font-size: clamp(28px, 7vw, 38px);
+    margin: 0 0 24px;
+}
+
+.koala-discovery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    touch-action: pan-y;
+}
+
+.koala-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.koala-navigation button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.koala-navigation span {
+    font-size: 13px;
+    color: var(--color-secondary);
+    white-space: nowrap;
+}
+
+.koala-navigation button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.koala-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    margin-bottom: 24px;
+    background-color: var(--color-section);
+    border-radius: 12px;
+}
+
+.koala-tab {
+    flex: 1;
+    padding: 12px 8px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--color-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.koala-tab.active {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.koala-tab:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+
+/* Saved Koalas */
+
+.saved-koalas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.saved-koala-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    background-color: var(--color-white);
+    border-radius: 14px;
+}
+
+.saved-koala-image {
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.saved-koala-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.saved-koala-info h2 {
+    font-family: 'PT Serif', Georgia, serif;
+    color: var(--color-primary);
+    font-size: 20px;
+    margin: 0 0 6px;
+}
+
+.saved-koala-info p {
+    color: var(--color-secondary);
+    font-size: 13px;
+    margin: 0;
+}
+
+.saved-koala-remove {
+    background: none;
+    border: none;
+    color: #B94F65;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.saved-koalas-empty {
+    padding: 36px 20px;
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: 14px;
+}
+
+.saved-koalas-empty p {
+    color: var(--color-text);
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.saved-koalas-empty button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.saved-koala-view {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+}
+
+.saved-koala-view:focus-visible,
+.saved-koala-remove:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 8px;
+}

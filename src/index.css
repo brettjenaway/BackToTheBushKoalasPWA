@@ -154,3 +154,7 @@ code {
   line-height: 1.6;
   margin: 0;
 }
+
+#nl-badge-frame {
+  display: none !important;
+}

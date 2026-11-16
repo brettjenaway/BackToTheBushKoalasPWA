@@ -13,7 +13,7 @@ function News() {
     const [page, setPage] = useState(1); // Stores the current page
     const [totalPages, setTotalPages] = useState(1); //Stores the total number of pages
     const [loadingMore, setLoadingMore] = useState(false); // Stores the state of the load more button
-    const pageSize = 5; // Stores number of articles per page. Set this to 1 for testing purposes
+    const pageSize = 2; // Stores number of articles per page. Set this to 1 for testing purposes
 
     useEffect(() => {
         let cancelled = false; // Flag if the user navigates away from the page while the request is still running

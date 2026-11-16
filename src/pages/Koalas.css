@@ -6,12 +6,12 @@
     box-sizing: border-box;
 }
 
-.koalas-page h1 {
+/* .koalas-page h1 {
     font-family: 'PT Serif', Georgia, serif;
     color: var(--color-primary);
     font-size: clamp(28px, 7vw, 38px);
     margin: 0 0 24px;
-}
+} */
 
 .koala-discovery {
     display: flex;

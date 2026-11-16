@@ -125,9 +125,9 @@ function Koalas() {
     }
 
     return (
-        <main className="koalas-page">
+        <main className="koalas-page page-header">
 
-            <h1>Discover Our Koalas</h1>
+            <h1 className="">Discover Our Koalas</h1>
             <div className="koala-tabs" role="group">
                 <button
                     type="button"

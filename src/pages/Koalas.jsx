@@ -128,7 +128,7 @@ function Koalas() {
         <main className="koalas-page page-header">
 
             <h1 className="">Discover Our Koalas</h1>
-            <div className="koala-tabs" role="group">
+            <div className="koala-tabs">
                 <button
                     type="button"
                     className={`koala-tab ${activeTab === 'all' ? 'active' : ''}`}

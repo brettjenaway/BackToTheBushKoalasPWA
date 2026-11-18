@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { House, PawPrint, Heart, Newspaper, Menu } from 'lucide-react';
+import { House, PawPrint, Heart, Newspaper, Binoculars } from 'lucide-react';
 import './BottomNav.css';
 
 function BottomNav() {
@@ -35,10 +35,10 @@ function BottomNav() {
                 </span>
             </NavLink>
 
-            <NavLink to="/more" className="nav-item">
+            <NavLink to="/koalaSighting" className="nav-item">
                 <span className="nav-content">
-                    <Menu size={24} />
-                    <span>More</span>
+                    <Binoculars size={24} />
+                    <span>Sightings</span>
                 </span>
             </NavLink>
         </nav>

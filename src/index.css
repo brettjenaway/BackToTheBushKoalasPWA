@@ -158,3 +158,8 @@ code {
 #nl-badge-frame {
   display: none !important;
 }
+
+/* Universal padding to ensure pages are visible above bottom nav bar */
+.app-content {
+  padding-bottom: 100px;
+}

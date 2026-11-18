@@ -1,4 +1,4 @@
-import { Heart, ExternalLink, Landmark, Mail, Copy } from 'lucide-react';
+import { Heart, ExternalLink, Landmark, Mail, Copy, Stethoscope, HeartPulse, House, Leaf } from 'lucide-react';
 import './Donate.css';
 
 const DONATION_URL = 'https://www.givenow.com.au/backtothebushkoalascomau';
@@ -10,10 +10,37 @@ function Donate() {
                 <h1> Help give koalas a second chance</h1>
                 <p>Your support helps provide the veterinary, rehabilitation facilities and ongoing care that injured koalas need.</p>
             </section>
+            {/* Support section */}
+            <section className="donate-impact">
+                <h2>Your Support Provides</h2>
+
+                <div className="donate-impact-grid">
+                    <div className="donate-impact-item">
+                        <Stethoscope size={28} />
+                        <span>Veterinary Treatment</span>
+                    </div>
+
+                    <div className="donate-impact-item">
+                        <HeartPulse size={28} />
+                        <span>24/7 Koala Hospital</span>
+                    </div>
+
+                    <div className="donate-impact-item">
+                        <House size={28} />
+                        <span>Recovery Facilities</span>
+                    </div>
+
+                    <div className="donate-impact-item">
+                        <Leaf size={28} />
+                        <span>Ongoing Care</span>
+                    </div>
+                </div>
+            </section>
+            {/* givenow donate section */}
             <section className="donate-content">
                 <h2>Every donation makes a difference</h2>
                 <p>Support Back to the Bush Koalas as we work towards a dedicated koala hospital for the Toowoomba region.</p>
-                <a href={DONATION_URL} target="_blank" rel="noopener noreferrer" className="donate-button">
+                <a href={DONATION_URL} target="_blank" className="donate-button">
                     <Heart size={20} />
                     Donate with GiveNow
                     <ExternalLink size={16} />
@@ -46,7 +73,6 @@ function Donate() {
                             <span>Account number</span>
                             <strong>16591399</strong>
                         </div>
-
                         <button type="button" onClick={() => navigator.clipboard.writeText('16591399')}>
                             <Copy size={16} />
                             Copy
@@ -54,9 +80,7 @@ function Donate() {
                     </div>
                     <div className="donate-receipt">
                         <Mail size={18} />
-                        <p>Need a receipt? Email{' '}
-                            <a href="mailto:info@backtothebushkoalas.com.au">info@backtothebushkoalas.com.au</a>
-                            {' '}and include your name.
+                        <p>Need a receipt? Email{' '}<a href="mailto:info@backtothebushkoalas.com.au">info@backtothebushkoalas.com.au</a>{' '}and include your name.
                         </p>
                     </div>
                 </div>

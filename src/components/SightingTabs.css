@@ -1,0 +1,30 @@
+.sighting-tabs {
+    display: flex;
+    gap: 4px;
+    background-color: #DDE8DF;
+    border-radius: 12px;
+    padding: 5px;
+    margin: 20px;
+}
+
+.sighting-tab {
+    flex: 1;
+    padding: 12px 8px;
+    border-radius: 9px;
+    text-align: center;
+    text-decoration: none;
+    color: #285943;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.sighting-tab.active {
+    background-color: #285943;
+    color: #FFFFFF;
+}
+
+.sighting-tab:focus-visible {
+    outline: 2px solid #C7663D;
+    outline-offset: 2px;
+}

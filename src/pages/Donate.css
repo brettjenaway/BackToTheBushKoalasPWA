@@ -28,8 +28,8 @@
 }
 
 .donate-hero p {
-    font-size: 1.1em;
-    line-height: 1.7;
+    font-size: 15px;
+    line-height: 1.6;
     color: #E6EFE6;
     margin: 0;
 }
@@ -82,7 +82,7 @@
     margin: 20px;
     padding: 24px 20px;
     border-radius: 16px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .donate-bank-heading {
@@ -174,4 +174,41 @@
 .donate-receipt a {
     color: #285943;
     font-weight: 600;
+}
+
+.donate-impact {
+    padding: 0px 20px 8px;
+}
+
+.donate-impact h2 {
+    font-family: 'PT Serif', Georgia, serif;
+    color: #285943;
+    font-size: 23px;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.donate-impact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.donate-impact-item {
+    background: #DDE8DF;
+    color: #285943;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 100px;
+}
+
+.donate-impact-item span {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
 }

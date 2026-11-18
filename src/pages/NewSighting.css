@@ -1,0 +1,239 @@
+.koala-sighting-header {
+    background-color: var(--color-primary);
+    position: relative;
+    overflow: hidden;
+    color: var(--color-white);
+    padding: 30px 24px 20px;
+}
+
+.koala-sighting-header h1 {
+    color: var(--color-white);
+    display: inline-block;
+}
+
+.koala-sighting-header p {
+    color: var(--color-white);
+    width: 100%;
+}
+
+.header-icon {
+    color: var(--color-whiteS);
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 130px;
+    height: 130px;
+    color: #BDD3BA;
+    opacity: 0.25;
+    stroke-width: 1;
+    pointer-events: none;
+}
+
+.koala-sighting-content {
+    margin: 20px;
+    padding: 24px 20px;
+    background: white;
+    border-radius: 16px;
+}
+
+.koala-sighting-disclaimer {
+    background-color: var(--color-section);
+    margin: 20px;
+    padding: 10px 20px 20px;
+    border-radius: 16px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--color-primary);
+}
+
+.koala-sighting-disclaimer h3 {
+    /* font-size: 14px; */
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.form-heading {
+    font-family: 'PT Serif', Georgia, serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--color-primary);
+    /* margin: 0 0 28px; */
+    padding-bottom: 16px;
+    border-bottom: 2px solid #DDE8DF;
+}
+
+.sighting-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.sighting-field label {
+    color: grey;
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.sighting-location-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--color-primary);
+    border: 1px solid #AFC8B3;
+    font-weight: 600;
+}
+
+.sighting-location-btn:disabled {
+    opacity: 0.6;
+}
+
+.sighting-coordinates {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 14px;
+    background-color: var(--color-background);
+    border: 1px solid #DDE8DF;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+
+
+.sighting-field input,
+.sighting-field textarea,
+.sighting-field select,
+.sighting-field button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    background-color: var(--color-background);
+    border: 1px solid #DDE8DF;
+    border-radius: 10px;
+    color: #26322C;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.sighting-field input:focus,
+.sighting-field textarea:focus,
+.sighting-field select:focus {
+    outline: 2px solid #285943;
+    outline-offset: 2px;
+}
+
+#sighting-location-button {
+    background-color: var(--color-section);
+}
+
+#sighting-submit {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #DDE8DF;
+    border-radius: 10px;
+    background: var(--color-primary);
+    color: #FFFFFF;
+    font: inherit;
+    font-size: 1em;
+    font-weight: 600;
+
+}
+
+.sighting-field input[type="file"] {
+    background-color: #F7F4EF;
+    border: 2px dashed #AFC8B3;
+    border-radius: 12px;
+    padding: 20px 14px;
+    color: #285943;
+    cursor: pointer;
+}
+
+.sighting-field input[type="file"]::file-selector-button {
+    background-color: #DDE8DF;
+    color: #285943;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-right: 12px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.sighting-photo-preview {
+    margin-top: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.sighting-photo-preview img {
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    background-color: #F7F4EF;
+}
+
+
+/* Save sighting feedback */
+
+.save-sighting-message {
+    margin: 14px 0 0;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Successful save */
+
+.save-success {
+    background-color: #E7F3EA;
+    border: 1px solid #B7D7BE;
+    color: #285943;
+}
+
+/* Validation or database error */
+
+.save-error {
+    background-color: #FDECEC;
+    border: 1px solid #F2C0BE;
+    color: #A12622;
+}
+
+.required {
+    color: #C7663D;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+
+.sighting-location-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 6px 0;
+    color: #6F8065;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.sighting-location-divider::before,
+.sighting-location-divider::after {
+    content: '';
+    flex: 1;
+    /* height: 1px;
+    background-color: #DDE8DF; */
+}

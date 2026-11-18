@@ -1,17 +1,8 @@
-.news-page {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 24px 20px 20px;
-    box-sizing: border-box;
-}
-
 .news-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
 
 /* Other styling on index.css for uniform headings */
 

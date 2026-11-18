@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Newspaper } from 'lucide-react';
 import { getNewsPage } from '../services/wordpressApi';
 import NewsCard from '../components/NewsCard';
 import koalaHero from '../assets/koala-hero.jpg';
@@ -67,41 +68,42 @@ function News() {
         <main className="news-page">
             <header className="news-page-header page-header">
                 <h1>Latest News & Updates</h1>
+                <Newspaper className="header-icon" />
                 <p>Follow the latest rehabilitation updates, news and rescue stories from Back to the Bush Koalas.</p>
             </header>
+            <div className="page-content">
+                <section className="news-list">
+                    {loading ? (
+                        <p>Loading news...</p>
+                    ) : articles.length === 0 && error ? (
+                        <p>Unable to load news: {error}</p>
+                    ) : articles.length === 0 ? (
+                        <p>No news articles available.</p>
+                    ) : (
+                        articles.map((article) => (
+                            <NewsCard
+                                key={article.id}
+                                id={article.id}
+                                title={article.title}
+                                date={new Date(article.date).toLocaleDateString('en-AU', {
+                                    day: 'numeric',
+                                    month: 'short',
+                                    year: 'numeric'
+                                })}
+                                category={article.category}
+                                image={article.image || koalaHero}
+                            />
+                        ))
+                    )}
 
-            <section className="news-list">
-                {loading ? (
-                    <p>Loading news...</p>
-                ) : articles.length === 0 && error ? (
-                    <p>Unable to load news: {error}</p>
-                ) : articles.length === 0 ? (
-                    <p>No news articles available.</p>
-                ) : (
-                    articles.map((article) => (
-                        <NewsCard
-                            key={article.id}
-                            id={article.id}
-                            title={article.title}
-                            date={new Date(article.date).toLocaleDateString('en-AU', {
-                                day: 'numeric',
-                                month: 'short',
-                                year: 'numeric'
-                            })}
-                            category={article.category}
-                            image={article.image || koalaHero}
-                        />
-                    ))
-                )}
+                </section>
 
-            </section>
-
-            {error && articles.length > 0 && (<p role="alert">Unable to load more news: {error}</p>)}
-            {/* Hide the load more button when no more articles exist */}
-            {!loading && page < totalPages && (<button className="load-news-more" onClick={loadMore} disabled={loadingMore}>
-                {loadingMore ? 'Loading...' : 'Load More'}
-            </button>)}
-
+                {error && articles.length > 0 && (<p role="alert">Unable to load more news: {error}</p>)}
+                {/* Hide the load more button when no more articles exist */}
+                {!loading && page < totalPages && (<button className="load-news-more" onClick={loadMore} disabled={loadingMore}>
+                    {loadingMore ? 'Loading...' : 'Load More'}
+                </button>)}
+            </div>
         </main>
     )
 }

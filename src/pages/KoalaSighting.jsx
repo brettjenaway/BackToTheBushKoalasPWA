@@ -53,9 +53,9 @@ function KoalaSighting() {
             </div>
             {
                 activeTab === 'new' ? (
-                    <NewSighting />
+                    <NewSighting onSaved={refreshSightingCount} />
                 ) : (
-                    <MySightings />
+                    <MySightings onDeleted={refreshSightingCount} />
                 )
             }
         </main >

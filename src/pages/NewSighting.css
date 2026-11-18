@@ -87,8 +87,6 @@
     line-height: 1.5;
 }
 
-
-
 .sighting-field input,
 .sighting-field textarea,
 .sighting-field select,
@@ -126,8 +124,8 @@
     font: inherit;
     font-size: 1em;
     font-weight: 600;
-
 }
+
 
 .sighting-field input[type="file"] {
     background-color: #F7F4EF;
@@ -219,3 +217,41 @@
     /* height: 1px;
     background-color: #DDE8DF; */
 }
+
+
+/* Mobile date and time input fixes */
+
+.koala-sighting-content form,
+.sighting-field {
+    min-width: 0;
+    max-width: 100%;
+}
+
+
+/* Consistent form field heights */
+
+.sighting-field input[type="date"],
+.sighting-field input[type="time"],
+.sighting-field input[type="text"],
+.sighting-field select {
+    height: 48px;
+    padding: 0 14px;
+}
+
+
+.sighting-field input[type="date"],
+.sighting-field input[type="time"] {
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+
+/* 
+@media (max-width: 480px) {
+
+    .sighting-field input[type="date"],
+    .sighting-field input[type="time"] {
+        width: 100%;
+        min-width: 0;
+    }
+} */

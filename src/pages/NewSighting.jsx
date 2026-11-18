@@ -6,7 +6,7 @@ import SightingTabs from '../components/SightingTabs';
 
 
 
-function NewSighting() {
+function NewSighting({ onSaved }) {
     //usestate declarations
     const [location, setLocation] = useState(null);
     const [error, setError] = useState('');
@@ -72,14 +72,14 @@ function NewSighting() {
         const sighting = {
             location: location, manualLocation: manualLocation.trim(), date: sightingDate, time: sightingTime, condition: condition, notes: notes, photo: photo, createdAt: new Date().toISOString()
         }
-
         try {
             setSaving(true);
             setSaveMessage('');
             //Save to IndexedDB
             const id = await saveSighting(sighting);
-            console.log('Sighting saved with ID:', id);
+            await onSaved?.();
             setSaveMessage('Koala sighting saved!');
+
             // Reset all form fields after successful save
             setLocation(null);
             setSightingDate('');

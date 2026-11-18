@@ -59,7 +59,6 @@ function MySightings() {
     if (loading) {
         return <p>Loading koala sightings...</p>
     }
-
     if (error) {
         return <p>{error}</p>
     }

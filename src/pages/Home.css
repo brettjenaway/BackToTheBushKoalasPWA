@@ -1,6 +1,5 @@
 .home-page {
     width: 100%;
-    max-width: 700px;
     margin: 0 auto;
     padding: 0px;
     box-sizing: border-box;
@@ -47,6 +46,7 @@
 
 .home-content {
     padding: 24px;
+    padding-bottom: 6px;
 }
 
 .home-header-leaf {

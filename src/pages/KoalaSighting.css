@@ -30,31 +30,6 @@
     outline-offset: 2px;
 }
 
-/* 
-.koala-sighting-header {
-    position: relative;
-    overflow: hidden;
-    background-color: #285943;
-    color: white;
-    padding: 40px 24px;
-} */
-
-.koala-sighting-header h1 {
-    font-family: 'PT Serif', Georgia, serif;
-    font-size: 32px;
-    line-height: 1.2;
-    color: white;
-    margin: 0 0 14px;
-}
-
-.koala-sighting-header p {
-    color: #E6EFE6;
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
-    max-width: 290px;
-}
-
 .koala-sighting-header .header-icon {
     position: absolute;
     top: -20px;

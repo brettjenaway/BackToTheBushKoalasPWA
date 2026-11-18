@@ -35,7 +35,7 @@ function KoalaSighting() {
             <section className="koala-sighting-header page-header">
                 <h1>Koala Sightings</h1>
                 <MapPin className="header-icon" />
-                <p>Record a koala you've spotted and keepa personal log of your observations.</p>
+                <p>Record a koala you've spotted and keep a personal log of your observations.</p>
             </section>
             <div className="sighting-tabs">
                 <button
